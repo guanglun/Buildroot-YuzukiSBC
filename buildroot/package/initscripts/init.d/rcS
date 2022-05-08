@@ -25,3 +25,8 @@ for i in /etc/init.d/S??* ;do
     esac
 done
 
+insmod /lib/modules/5.4.61/extra/8189fs.ko
+ifconfig wlan0 up 
+# wpa_supplicant -B -d -i wlan0 -c /etc/wpa_supplicant.conf
+# udhcpc -i wlan0
+
